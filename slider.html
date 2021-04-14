@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slidershow{
+
+width: 1000px;
+height: 600px;
+overflow : hidden ; 
+        }
+       .middle{
+        top:50px ;
+        position: relative;
+ } 
+        .navigation{
+        position: absolute;
+        bottom: 20px;
+        left : 50% ;
+        transform: translateX(-50%);
+        display: flex;
+        
+        }        
+
+        .bar{
+        
+        width: 50px; 
+        height: 20px;
+        border: 2px solid #fff;
+        margin :6px ; 
+
+        transition: 0.4s;
+
+        
+        cursor: pointer;
+
+        }
+                
+
+        .bar:hover{
+
+            background: #fff;
+        }
+     input[name="r"]{
+         position: absolute;
+         visibility: hidden;
+     }
+     .slides{
+
+        width: 500%;
+        height: 100%;
+        display: flex;
+     }
+     .slide{
+         width: 20% ; 
+         transition: 1s;
+         display: inline-flex;
+     }
+     .slide img{
+         width: 100%;
+         height: 100%;
+     }
+     #r1:checked ~ .s1{
+         margin-left:0 ; 
+     }
+     #r2:checked ~ .s1{
+         margin-left:-20% ; 
+     } 
+       #r3:checked ~ .s1{
+         margin-left:-40% ; 
+     }   
+ 
+    .text1{
+        position:absolute;
+
+        color:white; 
+font-size: 100px;
+transform: translate(5%,30%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    }
+ .text2{
+        position:absolute ;
+color:white; 
+font-size: 100px;
+top:10px;
+transform: translate(5%,30%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ .text3{
+        position:absolute ;
+color:white; 
+font-size: 100px;
+top:100px;
+transform: translate(5%,30%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+
+}
+            </style>
+</head>
+<body>
+    <div class="slidershow middle">   
+        <div class="slides"> 
+            <input type="radio" name="r" id="r1"checked >
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+ <div class="slide s1">  
+        <img src="3577915.jpg" alt=""> <div class="text1">Join <br> Our<br> Community  </div>
+            </div>
+ <div class="slide">  
+     <img src="EnragedPoshGiantschnauzer-small.gif" alt="">  <div class="text2">Our <br>BestSellers </div>
+
+    
+     <div>  </div>
+ </div>
+ <div class="slide">
+     <img src="c8d9e4565bccd6e60cf9428bc2c26e15.gif" alt="">   <div class="text3"> New <br>arrivels </div>  
+ </div>
+ 
+</div> 
+<div class="navigation">
+    <label for="r1" class="bar"></label>
+    <label for="r2" class="bar"></label>
+    <label for="r3" class="bar"></label>
+   
+   </div>
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+
+
+            margin: 0;
+            padding : 0; 
+            box-sizing: border-box;
+
+        }
+        body{
+            display: FLEX;
+background: blueviolet;
+justify-content: center;
+background-attachment: fixed;
+
+        }
+        .container{
+position: relative;
+width: 1150px;
+padding: 20px;
+display:flex ;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+
+
+        }
+        .container .card:first-child{
+
+            background-image: url("door-decorations-xl.webp");
+background-size: COVER;
+background-repeat: no-repeat;
+
+        }
+        .container .card:last-child{
+
+background-image: url("e.jpg");
+background-size: COVER;
+background-repeat: no-repeat;
+background-position:center;
+
+
+}
+        .container .card{
+position: relative;
+width: 40%;
+height: 500px;
+margin: 20px;
+border-radius: 20px;
+overflow:hidden  ; 
+box-shadow: 0 15px 25px rgba(170, 18, 18, 0.2);
+transition: 0.5s;
+
+        }
+        
+        .container .card .circle {
+
+            position: relative;
+           
+            width: 100%;
+            height: 100%;
+            background: black;
+            clip-path:circle(200px at center 0);
+            text-align: center;
+        }
+        .container .card .circle h2{
+color: blanchedalmond;
+font-size: 4.5em;
+padding: 30px 0 ;
+        }
+        .container .card .content {
+
+position: absolute;
+bottom: 10px;
+page-break-after: 20px;
+text-align: center;
+
+        }
+        .container .card .content p{
+
+color : #666 ; 
+        }
+        .container .card .content a{
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+        }
+        .container:hover .card{
+            filter: blur(20px);
+            transform: scale(0.9);
+            opacity: 0.5;
+        }
+        .container .card:hover {
+            filter: blur(0px);
+            transform: scale(1.2);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+<div class="card">
+    
+<div class="circle">
+    <a href="#"><h2>Shop</h2> </a></div>
+<div class="content">
+<p> create your own style </p>    
+
+<a href="#"> read </a>
+</div>
+</div>
+<div class="card">
+    <div class="circle">
+        <a href="#"><h2>Create</h2> </a>    </div>
+    <div class="content">
+    <p> create your own style </p>    
+    
+  
+    </div>
+    
+    
+    </div>
+    
+  </div>
+</body>
+</html>

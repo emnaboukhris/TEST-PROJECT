@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+        
+        }
+       li{
+            display: inline;
+        }
+     nav{
+        height : 2% ; 
+                width : 100% ; 
+                position:relative  ; 
+                padding-top : 10px ; 
+                background-color: burlywood;
+     }
+.site_name{
+height : 250px ; 
+background-color: cadetblue;
+
+
+}
+.wrapper{
+
+display: grid;
+grid-template-columns: 10% 30% 50% 10%;
+grid-column-gap: 5px;
+/*grid-auto-rows: 250px;*/ /* hight of row */ 
+grid-auto-rows: minmax(200px,auto);
+/*grid-template-columns: repeat(2,1fr);   */ /* 9adeh min wahda fi star 1fr 3orth najm nekteb 1fr 2fr 1fr */ 
+/* grid-gab: 1em */ /* gab row and column */ 
+/*justify-items: stretch;
+align-items: stretch;*/
+display: flex;
+
+}
+.one{
+    background-color: chartreuse;
+  /*  align-self: end;
+    grid-column: 1/3;
+  grid-row: 1/2;
+  */
+
+}
+.two{
+    background-color: crimson;
+}
+.slidershow{
+
+width: 700px;
+height: 400px;
+overflow : hidden ; 
+        }
+       .middle{
+        
+        position: absolute;
+    } 
+        .navigation{
+        position: absolute;
+        bottom: 20px;
+        left : 50% ;
+        transform: translateX(-50%);
+        display: flex;
+        
+        }        
+
+        .bar{
+        
+        width: 50px; 
+        height: 20px;
+        border: 2px solid #fff;
+        margin :6px ; 
+
+        transition: 0.4s;
+
+        
+        cursor: pointer;
+
+        }
+                
+
+        .bar:hover{
+
+            background: #fff;
+        }
+     input[name="r"]{
+         position: absolute;
+         visibility: hidden;
+     }
+     .slides{
+
+        width: 500%;
+        height: 100%;
+        display: flex;
+     }
+     .slide{
+         width: 20% ; 
+         transition: 1s;
+     }
+     .slide img{
+         width: 100%;
+         height: 100%;
+     }
+     #r1:checked ~ .s1{
+         margin-left:0 ; 
+     }
+     #r2:checked ~ .s1{
+         margin-left:-20% ; 
+     } 
+       #r3:checked ~ .s1{
+         margin-left:-40% ; 
+     }   
+     #r4:checked ~ .s1{
+         margin-left:-60% ; 
+     }
+     
+    
+    </style>
+</head>
+<body>
+<div>
+    <header> hola mamacita </header>
+   <nav>  <ul class="menu">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">contact</a></li>
+    <li><a href="#">shop</a></li>
+  </ul></nav>
+    <section class="site_name">1</section>
+    <section class="wrapper"> 
+<div class="one">create </div >
+<div class="two"> shop </div>
+
+    </section>
+    <div class="slidershow middle">   
+        <div class="slides"> 
+            <input type="radio" name="r" id="r1"checked >
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+ <div class="slide s1">  
+        <img src="1.jpeg" alt="">
+            </div>
+ <div class="slide">  
+     <img src="2.jpeg" alt="">
+ </div>
+ <div class="slide">
+     <img src="3.jpeg" alt="">
+ </div>
+ <div class="slide">
+       <img src="4.jpeg" alt="">
+ </div>
+</div> 
+<div class="navigation">
+    <label for="r1" class="bar"></label>
+    <label for="r2" class="bar"></label>
+    <label for="r3" class="bar"></label>
+    <label for="r4" class="bar"></label>
+   </div>
+</div> 
+
+    <footer> BY </footer>
+</div>
+</body>
+
+</html>

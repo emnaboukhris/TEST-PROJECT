@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+
+body{
+
+background: black;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 50px;
+color: #000;
+margin: 0;
+padding: 0;
+
+}
+.swiper-slide{
+
+
+background-position: center;
+background-size: cover;
+width: 400px;
+height:400px ;
+}
+
+.swiper-slide .number{
+position: absolute;
+top :50% ;
+left :50% ;
+transform:translate(-50%,50%);
+opacity: 0.5;
+text-shadow: 4px 4px 4px rgba(255, 255, 255,0.5),
+-5px 0px 4px rgba(255, 255, 255,0.5) ; 
+font-size: 100px;
+font-weight: 900px;
+
+
+}
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide" style="background-image: url(batman.jpg);"><div class="number">01</div></div>
+<div class="swiper-slide" style="background-image: url(superman.jpg);"><div class="number">02</div></div>
+<div class="swiper-slide" style="background-image: url(joker.jpg);"><div class="number">03</div></div>
+<div class="swiper-slide" style="background-image: url(wonder_women.jpg);"><div class="number">04</div></div>
+<div class="swiper-slide" style="background-image: url(it.jpg);"><div class="number">05</div></div>
+
+</div>
+
+
+  </div>  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 100,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
+</html>
